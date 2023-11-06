@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 20px;
+}
+
+.header img{
+    height: 65px;
+}
+
+.header ul{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+}
+
+.header a{
+    color: $primary-color;
+    font-size: 24px;
+}
+
+.active{
+    text-decoration: underline;
+}
+
