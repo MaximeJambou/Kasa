@@ -1,0 +1,38 @@
+.notFoundContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    margin: 100px 0;
+    gap: 50px;
+    // padding: 0 50px;
+
+    &__number{
+        font-weight: 700;
+        font-size: 288px;
+        margin: 0;
+        margin-bottom: 50px;
+        @include mobile{
+            font-size: 96px;
+        }
+    }
+
+    &__text{
+        font-size: 36px;
+        margin: 0;
+        text-align: center;
+        @include mobile{
+            font-size: 18px;
+        }       
+    }
+
+    &__link{
+        color: $primary-color;
+        text-decoration: underline;
+        font-size: 18px;
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}
