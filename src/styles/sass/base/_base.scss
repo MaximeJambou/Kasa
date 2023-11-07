@@ -4,12 +4,17 @@ html{
 }
 
 body{
-    margin: 30px 50px;
-    @include mobile{
-        margin : 10px;
-    }
+    margin: 0;
 }
 
 a{
     text-decoration: none;
+}
+
+
+main{
+    margin-inline: 50px;
+    @include mobile{
+        margin-inline: 20px;
+    }
 }

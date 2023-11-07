@@ -4,26 +4,26 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <header >
-            <div className='logo'>
-                <img src={logo} alt="Logo Kasa" />
+        <header className="header">
+            <div className="header__logo-container">
+                <img src={logo} alt="Logo Kasa" className="header__logo" />
             </div>
-            <nav>
-                <ul>
-                    <li>
+            <nav className="header__nav">
+                <ul className="header__nav-list">
+                    <li className="header__nav-item">
                         <NavLink
                             to="/"
-                            className={({ isActive }) => isActive ? 'active' : undefined}
+                            className={({ isActive }) => isActive ? 'header__nav-link header__nav-link--active' : 'header__nav-link'}
                         >
                             Accueil
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="header__nav-item">
                         <NavLink
                             to="/a-propos"
-                            className={({ isActive }) => isActive ? 'active' : undefined}
+                            className={({ isActive }) => isActive ? 'header__nav-link header__nav-link--active' : 'header__nav-link'}
                         >
-                            A propos
+                            À propos
                         </NavLink>
                     </li>
                 </ul>
@@ -31,6 +31,5 @@ const Header = () => {
         </header>
     );
 };
-
 
 export default Header;

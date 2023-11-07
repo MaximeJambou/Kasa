@@ -1,38 +1,41 @@
-header{
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
-}
-
-header img{
-    height: 65px;
+    margin: 30px 50px;
     @include mobile{
-        height: 45px;
-    }
-}
-
-header ul{
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    @include mobile{
-        gap: 10px;
+        margin: 10px 20px 20px 20px;
     }
 
-}
+    &__logo {
+        height: 65px;
+        @include mobile {
+            height: 45px;
+        }
+    }
 
-header a{
-    color: $primary-color;
-    font-size: 24px;
-    @include mobile{
-        font-size: 12px;
+
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        list-style: none;
+        @include mobile {
+            gap: 10px;
+        }
+    }
+
+
+    &__nav-link {
+        color: $primary-color;
+        font-size: 24px;
+        @include mobile {
+            font-size: 12px;
+        }
+
+        &--active {
+            text-decoration: underline;
+        }
     }
 }
-
-.active{
-    text-decoration: underline;
-}
-

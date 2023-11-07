@@ -7,9 +7,11 @@ const Banner = ({ image,  children }) => {
 
     return (
         <div className="banner" style={bannerStyles}>
-            {children}
-        </div>
+            <div className="banner__content">{children}</div>
+        </div>        
     );
 };
 
 export default Banner;
+
+
