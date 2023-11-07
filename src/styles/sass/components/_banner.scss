@@ -1,0 +1,45 @@
+.banner {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 223px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    @include mobile{
+        height: 111px;
+        border-radius: 10px;
+    }
+
+    h1{
+        color: $text-color;
+        font-size: 48px;
+        font-weight: 500;
+        @include mobile{
+            font-size: 24px;
+        }
+    }
+
+    // Pseudo-élément pour le voile d'opacité
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3); 
+        z-index: 1;
+        border-radius: 25px;
+        @include mobile{
+            border-radius: 10px;
+        }
+    }
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+}

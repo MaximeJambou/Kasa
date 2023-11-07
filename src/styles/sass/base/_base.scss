@@ -3,6 +3,13 @@ html{
     font-weight: 500;
 }
 
+body{
+    margin: 30px 50px;
+    @include mobile{
+        margin : 10px;
+    }
+}
+
 a{
     text-decoration: none;
 }
