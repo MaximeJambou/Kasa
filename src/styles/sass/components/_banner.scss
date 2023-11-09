@@ -8,6 +8,9 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
+    @include tablet{
+        height: 160px;
+    }
     @include mobile {
         height: 111px;
         border-radius: 10px;
