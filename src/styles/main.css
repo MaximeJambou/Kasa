@@ -107,6 +107,14 @@ main {
   }
 }
 
+.about__container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  width: 80%;
+}
+
 .notFoundContainer {
   display: flex;
   flex-direction: column;
@@ -250,6 +258,52 @@ main {
     padding: 0;
     background-color: none;
   }
+}
+
+.collapse {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.collapse .collapse-title {
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF6060;
+  cursor: pointer;
+}
+.collapse .collapse-title h2 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+.collapse .collapse-title img {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+.collapse .collapse-title .rotate {
+  transform: rotate(180deg);
+}
+.collapse .collapse-content {
+  padding: 0;
+  background-color: #F6F6F6;
+  color: #FF6060;
+  visibility: hidden;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+.collapse.open .collapse-content {
+  visibility: visible;
+  opacity: 1;
+  padding: 15px;
+  transform: scaleY(1);
 }
 
 /*# sourceMappingURL=main.css.map */

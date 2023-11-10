@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../components/Card';
 
+// Initialisation de l'état local avec une valeur de tableau vide
 const Gallery = () => {
     const [lodgings, setLodgings] = useState([]);
 
