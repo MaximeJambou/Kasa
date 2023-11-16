@@ -1,6 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
-
 import Slideshow from '../components/Slideshow';
 
 function LodgingPage() {
@@ -11,23 +10,33 @@ function LodgingPage() {
         fetch('/data/logements.json')
             .then(response => response.json())
             .then(data => {
-                // Trouver le logement spécifique par ID
                 const selectedLodging = data.find(lodging => lodging.id === id);
-                setLodgingData(selectedLodging);
+                if (selectedLodging) {
+                    setLodgingData(selectedLodging);
+                } else {
+                    setLodgingData(undefined);
+                }
             })
-            .catch(error => console.error('Erreur lors du chargement des données du logement', error));
+            .catch(error => {
+                console.error('Erreur lors du chargement des données du logement', error);
+                setLodgingData(undefined);
+            });
     }, [id]);
 
+    // Si lodgingData est undefined, rediriger vers 404
+    if (lodgingData === undefined) {
+        return <Navigate replace to="/404" />;
+    }
+
+    if (lodgingData === null) {
+        return <div>Chargement en cours...</div>;
+    }
+
+    // Rendre le composant normalement si les données sont présentes
     return (
         <div>
-        {lodgingData ? (
-            <div>
-                <Slideshow slides={lodgingData.pictures} />
-            </div>
-        ) : (
-            <div>Chargement des données...</div>
-        )}
-    </div>
+            <Slideshow slides={lodgingData.pictures} />
+        </div>
     );
 }
 

@@ -18,8 +18,8 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/a-propos" element={<About />} />
-                <Route path="*" element={<NotFound />} />
                 <Route path="/logement/:id" element={<LodgingPage />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </main>
         <Footer />
