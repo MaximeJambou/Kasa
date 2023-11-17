@@ -203,6 +203,27 @@ main {
   flex-direction: row;
   gap: 10px;
 }
+.lodging-info__host {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .lodging-info__host {
+    flex-direction: row-reverse;
+  }
+}
+
+.lodging-collapses {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+@media screen and (max-width: 768px) {
+  .lodging-collapses {
+    flex-direction: column;
+  }
+}
 
 .banner {
   position: relative;
@@ -418,6 +439,7 @@ main {
 
 .host {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 .host__name {
@@ -444,6 +466,21 @@ main {
     width: 32px;
     height: 32px;
   }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+.rating .fa-star {
+  font-size: 24px;
+  margin-left: 10px;
+}
+.rating .fa-star.full-star {
+  color: #FF6060;
+}
+.rating .fa-star.empty-star {
+  color: #E3E3E3;
 }
 
 /*# sourceMappingURL=main.css.map */

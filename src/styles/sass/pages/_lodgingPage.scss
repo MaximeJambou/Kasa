@@ -42,4 +42,22 @@
             gap: 10px;
         }
     }
+
+    &__host{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include mobile{
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.lodging-collapses{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    @include mobile{
+        flex-direction: column;
+    }
 }

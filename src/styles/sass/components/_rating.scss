@@ -1,0 +1,17 @@
+.rating {
+    display: flex;
+    align-items: center;
+
+    .fa-star {
+        font-size: 24px;
+        margin-left: 10px;
+
+        &.full-star {
+            color: $primary-color;
+        }
+
+        &.empty-star {
+            color: #E3E3E3;
+        }
+    }
+}
