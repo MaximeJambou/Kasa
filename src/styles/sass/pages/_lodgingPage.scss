@@ -1,0 +1,45 @@
+.lodging-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.lodging-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0;
+    @include mobile{
+        flex-direction: column;
+    }
+    
+    &__title{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h1{
+            color: $primary-color;
+            margin: 0;
+            font-weight: 500;
+            font-size: 36px;
+            @include mobile{
+                font-size: 18px;
+            }
+        }
+
+        &--location{
+            color: $primary-color;
+            margin: 0;
+            font-size: 18px;
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+
+        &--tags{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    }
+}

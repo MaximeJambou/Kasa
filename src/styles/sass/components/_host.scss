@@ -1,0 +1,28 @@
+.host {
+    display: flex;
+    align-items: center;
+
+    &__name {
+        margin-right: 20px;
+
+        p {
+            margin: 0;
+            color: $primary-color;
+            font-size: 18px;
+            @include mobile{
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__picture {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+        @include mobile{
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
