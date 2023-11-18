@@ -5,7 +5,10 @@
     overflow: hidden;
 
     .collapse-title {
+        position: relative;
+        z-index: 2;
         padding: 10px 15px;
+        border-radius: 5px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -32,20 +35,21 @@
     }
 
     .collapse-content {
-        padding: 0;
+        position: relative;
+        z-index: 1;
+        margin-top: -5px;
+        padding: 0 15px;
         background-color: $background-color;
         color: $primary-color;
-        visibility: hidden;
-        opacity: 0;
-        transform: scaleY(0);
-        transform-origin: top;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+        border-bottom-left-radius: 5px; 
+        border-bottom-right-radius:5px;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
     }
 
     &.open .collapse-content {
-        visibility: visible; 
-        opacity: 1;
-        padding: 15px;
-        transform: scaleY(1);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        max-height: 500px;
     }
 }
