@@ -211,6 +211,7 @@ main {
 @media screen and (max-width: 768px) {
   .lodging-info__host {
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 
@@ -223,6 +224,12 @@ main {
   .lodging-collapses {
     flex-direction: column;
   }
+}
+.lodging-collapses__container {
+  width: 100%;
+}
+.lodging-collapses p {
+  margin: 0;
 }
 
 .banner {
@@ -352,9 +359,9 @@ main {
   margin: 0;
   font-size: 16px;
   color: white;
+  font-weight: 500;
 }
 .collapse .collapse-title img {
-  display: flex;
   width: 20px;
   height: 20px;
   transition: transform 0.5s ease-in-out;
@@ -365,7 +372,6 @@ main {
 .collapse .collapse-content {
   position: relative;
   z-index: 1;
-  margin-top: -5px;
   padding: 0 15px;
   background-color: #F6F6F6;
   color: #FF6060;
@@ -375,6 +381,7 @@ main {
   transition: max-height 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
 }
 .collapse.open .collapse-content {
+  margin-top: -5px;
   padding-top: 15px;
   padding-bottom: 15px;
   max-height: 500px;

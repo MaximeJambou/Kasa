@@ -61,14 +61,18 @@ function LodgingPage() {
             </div>
 
             <div className='lodging-collapses'>
-                <Collapse title="Description" >
-                    {lodgingData.description} 
-                </Collapse>
-                <Collapse title="Équipements" >
-                    {lodgingData.equipments.map((equipment, index) => (
-                        <p key={index}>{equipment}</p>
-                    ))}
-                </Collapse>     
+                <div className="lodging-collapses__container">
+                    <Collapse title="Description" >
+                        {lodgingData.description}
+                    </Collapse>
+                </div>
+                <div className="lodging-collapses__container">
+                    <Collapse title="Équipements" >
+                        {lodgingData.equipments.map((equipment, index) => (
+                            <p key={index}>{equipment}</p>
+                        ))}
+                    </Collapse>
+                </div>     
             </div>          
 
         </div>

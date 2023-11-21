@@ -15,15 +15,15 @@
         justify-content: space-between;
         background-color: $primary-color;
         cursor: pointer;
-
+        
         h2 {
             margin: 0;
             font-size: 16px;
             color: white;
+            font-weight: 500;
         }
 
         img {
-            display: flex;
             width: 20px;
             height: 20px;
             transition: transform 0.5s ease-in-out;
@@ -37,7 +37,6 @@
     .collapse-content {
         position: relative;
         z-index: 1;
-        margin-top: -5px;
         padding: 0 15px;
         background-color: $background-color;
         color: $primary-color;
@@ -48,6 +47,7 @@
     }
 
     &.open .collapse-content {
+        margin-top: -5px;
         padding-top: 15px;
         padding-bottom: 15px;
         max-height: 500px;
