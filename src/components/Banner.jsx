@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Banner = ({ image,  children }) => {
     const bannerStyles = {
@@ -12,6 +13,9 @@ const Banner = ({ image,  children }) => {
     );
 };
 
+Banner.propTypes = {
+    image: PropTypes.string.isRequired,
+    children: PropTypes.node
+};
+
 export default Banner;
-
-

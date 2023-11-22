@@ -1,4 +1,6 @@
+
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Card = ({ lodging }) => {
     return (
@@ -7,6 +9,13 @@ const Card = ({ lodging }) => {
         <h2>{lodging.title}</h2>
         </div>
     );
+};
+
+Card.propTypes = {
+    lodging: PropTypes.shape({
+        cover: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired
+    }).isRequired
 };
 
 export default Card;

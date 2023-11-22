@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import arrowUp from "../assets/images/arrow_up.png";
 
 const Collapse = ({ title, children }) => {
@@ -19,6 +20,11 @@ const Collapse = ({ title, children }) => {
             </div>
         </div>
     );
+};
+
+Collapse.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node
 };
 
 export default Collapse;

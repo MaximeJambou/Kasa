@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Host = ({ host }) => {
     // Destructuring pour décomposer le nom en prénom et nom de famille
@@ -14,5 +15,12 @@ const Host = ({ host }) => {
         </div>
     );
 }
+
+Host.propTypes = {
+    host: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        picture: PropTypes.string.isRequired
+    }).isRequired
+};
 
 export default Host;
