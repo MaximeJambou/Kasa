@@ -21,6 +21,10 @@
         transform: translateY(-50%);
         height: 80px;
         width: 47px;
+        @include mobile{
+            height: 20px;
+            width: 12px;
+        }
     }
 
     .arrowLeft {
@@ -38,6 +42,9 @@
         transform: translateX(-50%);
         color: white;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 18px;
+        @include mobile{
+            display: none;
+        }
     }
 }

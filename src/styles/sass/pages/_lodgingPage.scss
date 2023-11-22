@@ -1,6 +1,10 @@
 .lodging-page{
     display: flex;
     flex-direction: column;
+    margin-bottom: 40px;
+    @include mobile{
+        margin-bottom: 30px;
+    }
 }
 
 .lodging-info{
@@ -10,12 +14,17 @@
     margin: 30px 0;
     @include mobile{
         flex-direction: column;
+        margin-bottom: 20px;
     }
     
     &__title{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
+        @include mobile{
+            gap: 10px;
+            margin-bottom: 15px;
+        }
 
         h1{
             color: $primary-color;
@@ -46,10 +55,11 @@
     &__host{
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 32px;
         @include mobile{
             flex-direction: row-reverse;
             justify-content: space-between;
+            gap: 0;
         }
     }
 }
@@ -60,6 +70,7 @@
     gap: 5%;
     @include mobile{
         flex-direction: column;
+        gap: 25px;
     }
 
     &__container{

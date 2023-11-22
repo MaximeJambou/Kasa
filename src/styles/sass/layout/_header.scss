@@ -3,9 +3,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 30px 50px;
+    margin: 30px 7%;
     @include tablet{
-        margin: 10px 20px 20px 20px;
+        margin: 10px 15px 20px 15px;
     }
     @include mobile{
         margin: 10px 20px 20px 20px;
@@ -26,6 +26,7 @@
         list-style: none;
         @include mobile {
             gap: 10px;
+            padding: 0;
         }
     }
 
@@ -33,6 +34,7 @@
     &__nav-link {
         color: $primary-color;
         font-size: 24px;
+        flex-wrap: nowrap;
         @include mobile {
             font-size: 12px;
         }

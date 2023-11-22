@@ -1,10 +1,16 @@
 .rating {
     display: flex;
     align-items: center;
+    gap: 10px;
+    @include mobile{
+        gap: 5px;
+    }
 
     .fa-star {
         font-size: 24px;
-        margin-left: 10px;
+        @include mobile{
+            font-size: 14px;
+        }
 
         &.full-star {
             color: $primary-color;

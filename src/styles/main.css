@@ -1,6 +1,7 @@
 html {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  min-width: 320px;
 }
 
 body {
@@ -12,7 +13,7 @@ a {
 }
 
 main {
-  margin-inline: 50px;
+  margin-inline: 7%;
 }
 @media screen and (max-width: 768px) {
   main {
@@ -21,7 +22,7 @@ main {
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   main {
-    margin-inline: 5px;
+    margin-inline: 15px;
   }
 }
 
@@ -30,11 +31,11 @@ main {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 50px;
+  margin: 30px 7%;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .header {
-    margin: 10px 20px 20px 20px;
+    margin: 10px 15px 20px 15px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -59,11 +60,13 @@ main {
 @media screen and (max-width: 768px) {
   .header__nav-list {
     gap: 10px;
+    padding: 0;
   }
 }
 .header__nav-link {
   color: #FF6060;
   font-size: 24px;
+  flex-wrap: nowrap;
 }
 @media screen and (max-width: 768px) {
   .header__nav-link {
@@ -110,9 +113,19 @@ main {
 .about__container {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-top: 50px;
-  width: 80%;
+  margin: 30px auto;
+  gap: 20px;
+  width: 85%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about__container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about__container {
+    width: 100%;
+  }
 }
 
 .notFoundContainer {
@@ -159,6 +172,12 @@ main {
 .lodging-page {
   display: flex;
   flex-direction: column;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .lodging-page {
+    margin-bottom: 30px;
+  }
 }
 
 .lodging-info {
@@ -170,12 +189,19 @@ main {
 @media screen and (max-width: 768px) {
   .lodging-info {
     flex-direction: column;
+    margin-bottom: 20px;
   }
 }
 .lodging-info__title {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+}
+@media screen and (max-width: 768px) {
+  .lodging-info__title {
+    gap: 10px;
+    margin-bottom: 15px;
+  }
 }
 .lodging-info__title h1 {
   color: #FF6060;
@@ -206,12 +232,13 @@ main {
 .lodging-info__host {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 }
 @media screen and (max-width: 768px) {
   .lodging-info__host {
     flex-direction: row-reverse;
     justify-content: space-between;
+    gap: 0;
   }
 }
 
@@ -223,6 +250,7 @@ main {
 @media screen and (max-width: 768px) {
   .lodging-collapses {
     flex-direction: column;
+    gap: 25px;
   }
 }
 .lodging-collapses__container {
@@ -339,7 +367,6 @@ main {
 
 .collapse {
   width: 100%;
-  margin-bottom: 20px;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -357,9 +384,14 @@ main {
 }
 .collapse .collapse-title h2 {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  .collapse .collapse-title h2 {
+    font-size: 13px;
+  }
 }
 .collapse .collapse-title img {
   width: 20px;
@@ -412,6 +444,12 @@ main {
   height: 80px;
   width: 47px;
 }
+@media screen and (max-width: 768px) {
+  .slideshow .arrowLeft, .slideshow .arrowRight {
+    height: 20px;
+    width: 12px;
+  }
+}
 .slideshow .arrowLeft {
   left: 20px;
 }
@@ -425,7 +463,12 @@ main {
   transform: translateX(-50%);
   color: white;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .slideshow .numbering {
+    display: none;
+  }
 }
 
 .tag {
@@ -482,10 +525,20 @@ main {
 .rating {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 768px) {
+  .rating {
+    gap: 5px;
+  }
 }
 .rating .fa-star {
   font-size: 24px;
-  margin-left: 10px;
+}
+@media screen and (max-width: 768px) {
+  .rating .fa-star {
+    font-size: 14px;
+  }
 }
 .rating .fa-star.full-star {
   color: #FF6060;
