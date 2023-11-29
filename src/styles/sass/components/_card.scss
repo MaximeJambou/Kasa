@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 340px;
+    aspect-ratio: 1/1;
     @include mobile{
         height: 255px;
     }
